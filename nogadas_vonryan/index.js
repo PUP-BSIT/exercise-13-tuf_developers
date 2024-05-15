@@ -34,3 +34,21 @@ function validateComment() {
 		commentButton.disabled = true;
 	}
 }
+
+function updateComments() {
+	commentList.innerHTML = "";
+
+	for (const comment of commentListData) {
+		const newComment = document.createElement("li");
+		const formatDate = new Date(comment.date);
+
+		newComment.innerHTML = `
+			<div class='upper-tags'>
+				<div class='user-tag'>${comment.name}</div>
+				<div class='date-tag'>${formatDate.toLocaleString()}</div>
+			</div>
+			<div class='user-comment'>${comment.comment}</div>`;
+
+		commentList.append(newComment);
+	}
+}
