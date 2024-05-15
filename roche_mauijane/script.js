@@ -27,6 +27,14 @@ const comments = [
 	},
 ];
 
+function validateComment() {
+	if (commentName.value.length && commentMessage.value.length) {
+		commentButton.disabled = false;
+	} else {
+		commentButton.disabled = true;
+	}
+}
+
 function displayComments() {
 	commentsContainer.innerHTML = "";
 	comments.forEach((comment) => {
@@ -36,12 +44,4 @@ function displayComments() {
 		} (${comment.date.toLocaleString()})`;
 		commentsContainer.append(commentElement);
 	});
-}
-
-function validateComment() {
-	if (commentName.value.length && commentMessage.value.length) {
-		commentButton.disabled = false;
-	} else {
-		commentButton.disabled = true;
-	}
 }
