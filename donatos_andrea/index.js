@@ -44,8 +44,8 @@ function updateComments() {
 
 		newComment.innerHTML = `
 			<div class='upper-tags'>
-				<div class='user-tag'>${comment.name}</div>
-				<div class='date-tag'>${formatDate.toLocaleString()}</div>
+			    <div class='user-tag'>${comment.name}</div>
+			    <div class='date-tag'>${formatDate.toLocaleString()}</div>
 			</div>
 			<div class='user-comment'>${comment.comment}</div>`;
 
