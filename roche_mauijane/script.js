@@ -2,6 +2,8 @@ const commentName = document.querySelector("#name");
 const commentMessage = document.querySelector("#comment");
 const commentButton = document.querySelector("#comment_button");
 const commentsContainer = document.querySelector("#comments");
+const sortAscButton = document.querySelector("#ascend");
+const sortDescButton = document.querySelector("#descend");
 
 const comments = [
 	{
@@ -44,4 +46,30 @@ function displayComments() {
 		} (${comment.date.toLocaleString()})`;
 		commentsContainer.append(commentElement);
 	});
+}
+
+function addComment(name, message, date) {
+	const comment = {
+		name,
+		message,
+		date: date || new Date(),
+	};
+	comments.push(comment);
+	if (sortOrder === newest) {
+		sortCommentsDesc();
+	} else {
+		sortCommentsAsc();
+	}
+}
+
+function sortCommentsAsc() {
+	comments.sort((a, b) => new Date(a.date) - new Date(b.date));
+	displayComments();
+	sortOrder = oldest;
+}
+
+function sortCommentsDesc() {
+	comments.sort((a, b) => new Date(b.date) - new Date(a.date));
+	displayComments();
+	sortOrder = newest;
 }
