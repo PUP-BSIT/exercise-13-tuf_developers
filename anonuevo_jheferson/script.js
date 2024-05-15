@@ -81,3 +81,12 @@ function pressButton(){
 	commentMessage.value = "";
 	commentButton.disabled = true;
 }
+
+commentButton.addEventListener("click", pressButton);
+sortAscButton.addEventListener("click", sortCommentsAsc);
+sortDescButton.addEventListener("click", sortCommentsDesc);
+
+commentName.addEventListener("input", validateComment);
+commentMessage.addEventListener("input", validateComment);
+
+displayComments();
