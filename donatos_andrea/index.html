@@ -2,10 +2,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+		<meta name="viewport"
+			  content="width=device-width, initial-scale=1.0"/>
 		<title>donatos_andrea</title>
 		<link href="andrea.css" rel="stylesheet" />
 	</head>
@@ -26,27 +24,27 @@
 		<div class="works">
 			<h2>My works</h2>
 			<ol>
-				<li>
-					<a href="./works/practice_1.html" target="_blank">
+			  <li>
+				 <a href="./works/practice_1.html" target="_blank">
 						Work 1
-					</a>
-				</li>
-				<li>
-					<a href="./works/practice_2.html" target="_blank">
+				 </a>
+			  </li>
+			  <li>
+				 <a href="./works/practice_2.html" target="_blank">
 						Work 2
-					</a>
-				</li>
-				<li>
-					<a href="./works/practice_3.html" target="_blank">
+				 </a>
+			  </li>
+			  <li>
+				 <a href="./works/practice_3.html" target="_blank">
 						Work 3
-					</a>
-				</li>
-				<li>
-					<a href="./works/practice_4.html" target="_blank">
+				 </a>
+			  </li>
+			  <li>
+				 <a href="./works/practice_4.html" target="_blank">
 						Work 4
-					</a>
-				</li>
-				<li>
+				 </a>
+			  </li>
+			  <li>
 					<a href="./works/practice_5.html" target="_blank">
 						Work 5
 					</a>
@@ -124,13 +122,11 @@
 					<li>To have a successful life</li>
 				</ul>
 				<h2>TUF DEVELOPERS Comments</h2>
-				<ul>
-					<p>Amazing goal, keep it up! -Jhef</p>
-					<p>Your strategic approach to planning and
-					   executing your life goals is impressive - Von</p>
-					<p>I love your goals, they reflect mine - Mau</p>
-					<p>You could survive a zombie apocalypse - Mark</p>
-				</ul>
+				<select id="sort_type" onchange="sortComments()">
+					<option value="oldest_first">Oldest First</option>
+					<option value="newest_first">Newest First</option>
+				</select>
+				<ul id="comment_list"></ul>
 			</div>
 		</section>
 		<div class="comment-form">
@@ -146,19 +142,21 @@
 					/>
 				</div>
 				<div>
-					<label>Comments:</label>
-					<textarea name="comment" id="comment_area" 
-				    	oninput="commentForm()"></textarea>
+					<label for="comment">Comments:</label>
+					<textarea name="comment" 
+					          id="comment_area" 
+				    	      oninput="commentForm()"></textarea>
 				</div>
 				<div class="submit-comment">
-					<button type="submit" id="comment_button" disabled>
-						Comment
-					</button>
+					<button type="button" 
+					        id="comment_button" 
+							onclick="addComment()"
+							disabled>Comment</button>
 				</div>
 			</form>
 		</div>
 		<div class="thoughts">
-			<h2>My thoughts to face to face class</h2>
+		  <h2>My thoughts to face to face class</h2>
 			<p>
 				On our previous class we conducted a face to face class 
 				instead of online class and I think its a better way to 
