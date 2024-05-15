@@ -1,6 +1,7 @@
 const commentName = document.querySelector("#name");
 const commentMessage = document.querySelector("#comment");
 const commentButton = document.querySelector("#comment_button");
+const commentsContainer = document.querySelector("#comments");
 
 const comments = [
 	{
