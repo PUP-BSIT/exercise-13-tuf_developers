@@ -91,21 +91,21 @@ body {
 }
 
 .sort-button {
-    padding: 10px 20px;
-    background-color: #adbada;
-    border: 1px solid #ffea30;
-    color: #283374;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 5px;
+	padding: 10px 20px;
+	background-color: #adbada;
+	border: 1px solid #ffea30;
+	color: #283374;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	margin: 5px;
 }
 
 .sort-button:hover {
-    background-color: #fe17c1;
-    color: #ffffff;
-    transform: scale(1.05);
+	background-color: #fe17c1;
+	color: #ffffff;
+	transform: scale(1.05);
 }
 
 .comment-section {
@@ -122,7 +122,7 @@ body {
 }
 
 .comment-form {
-    border: 3px solid #fe17c1;
+	border: 3px solid #fe17c1;
 	color: white;
 	padding: 20px;
 	max-width: 300px;
