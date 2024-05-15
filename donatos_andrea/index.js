@@ -28,11 +28,11 @@ const commentListData = [
 ];
 
 function commentForm() {
-	 if (memberName.value && commentArea.value) {
-         commentButton.disabled = false;
-     } else {
-         commentButton.disabled = true;
-}
+    if (memberName.value && commentArea.value) {
+        commentButton.disabled = false;
+    } else {
+        commentButton.disabled = true;
+    }
 }
 
 function updateComments() {
