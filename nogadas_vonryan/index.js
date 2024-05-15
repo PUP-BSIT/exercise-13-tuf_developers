@@ -1,11 +1,11 @@
 function validateComment() {
-	let comment_name = document.getElementById("comment_name");
-	let comment_content = document.getElementById("comment_content");
-	let comment_button = document.getElementById("comment_button");
+	let commentName = document.getElementById("comment_name");
+	let commentContent = document.getElementById("comment_content");
+	let commentButton = document.getElementById("comment_button");
 
-	if (comment_name.value && comment_content.value) {
-		comment_button.disabled = false;
+	if (commentName.value && commentContent.value) {
+		commentButton.disabled = false;
 	} else {
-		comment_button.disabled = true;
+		commentButton.disabled = true;
 	}
 }
