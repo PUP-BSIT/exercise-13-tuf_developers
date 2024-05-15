@@ -4,9 +4,11 @@ const commentButton = document.querySelector("#comment_button");
 const commentsContainer = document.querySelector("#comments-container");
 const sortAscButton = document.querySelector("#sort-asc");
 const sortDescButton = document.querySelector("#sort-desc");
+
 const newest = 'newest_to_oldest';
 const oldest = 'oldest_to_newest';
 let sortOrder = newest;
+
 const comments = [
 	{
 		name: "Von",
