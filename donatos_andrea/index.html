@@ -124,13 +124,11 @@
 					<li>To have a successful life</li>
 				</ul>
 				<h2>TUF DEVELOPERS Comments</h2>
-				<ul>
-					<p>Amazing goal, keep it up! -Jhef</p>
-					<p>Your strategic approach to planning and
-					   executing your life goals is impressive - Von</p>
-					<p>I love your goals, they reflect mine - Mau</p>
-					<p>You could survive a zombie apocalypse - Mark</p>
-				</ul>
+				<select id="sort_type" onchange="sortComments()">
+					<option value="oldest_first">Oldest First</option>
+					<option value="newest_first">Newest First</option>
+				</select>
+				<ul id="comment_list"></ul>
 			</div>
 		</section>
 		<div class="comment-form">
@@ -146,13 +144,17 @@
 					/>
 				</div>
 				<div>
-					<label>Comments:</label>
-					<textarea name="comment" id="comment_area" 
-				    	oninput="commentForm()"></textarea>
+					<label for="comment">Comments:</label>
+					<textarea name="comment" 
+					          id="comment_area" 
+				    	      oninput="commentForm()">
+					</textarea>
 				</div>
 				<div class="submit-comment">
-					<button type="submit" id="comment_button" disabled>
-						Comment
+					<button type="submit" 
+					        id="comment_button" 
+							disabled>
+			                Comment
 					</button>
 				</div>
 			</form>
