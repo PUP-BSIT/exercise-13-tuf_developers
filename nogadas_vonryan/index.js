@@ -38,16 +38,16 @@ function validateComment() {
 function updateComments() {
 	commentList.innerHTML = "";
 
-	for (const comment of commentListData) {
+	for (const commentData of commentListData) {
 		const newComment = document.createElement("li");
-		const formatDate = new Date(comment.date);
+		const formatDate = new Date(commentData.date);
 
 		newComment.innerHTML = `
 			<div class='upper-tags'>
-				<div class='user-tag'>${comment.name}</div>
+				<div class='user-tag'>${commentData.name}</div>
 				<div class='date-tag'>${formatDate.toLocaleString()}</div>
 			</div>
-			<div class='user-comment'>${comment.comment}</div>`;
+			<div class='user-comment'>${commentData.comment}</div>`;
 
 		commentList.append(newComment);
 	}
@@ -72,7 +72,7 @@ function addComment() {
 	const newComment = {
 		name: commentName.value,
 		comment: commentContent.value,
-		date: new Date().toISOString(),
+		date: new Date(),
 	};
 
 	commentListData.push(newComment);
