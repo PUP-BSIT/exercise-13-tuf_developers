@@ -28,7 +28,7 @@ const commentListData = [
 ];
 
 function commentForm() {
-	 if (memberName.value.length > 0 && commentArea.value.length > 0) {
+	 if (memberName.value && commentArea.value) {
          commentButton.disabled = false;
      } else {
          commentButton.disabled = true;
