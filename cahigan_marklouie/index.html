@@ -81,11 +81,13 @@
 
 			<div class="comment-section">
 				<h2>Comment Section</h2>
-				<p>Your goals also reflect mine - Jhef</p>
-				<p>Your goals are truly inspiring - Von</p>
-				<p>I rooting for your goal - Andrea</p>
-				<p>Stay motivated, you're making it happen - Mau </p>
-
+				<button id="ascend" 
+					onclick=setToAscend()>Ascending</button>
+				<button id="descend"
+					onclick=setToDescend()>Descending</button>
+				<ul id="comment_list"> 	
+				</ul>
+				
 				<div class="comment-title">
 					<h2>Add Comment</h2>
 				</div>
@@ -93,7 +95,8 @@
 				<form class="input-comment">
 					<div class="c-name">
 						<label for="user">Name</label>
-						<input type="text" name="user" id="user" />
+						<input type="text" name="user" id="user" 
+							onchange="validComment()"	/>
 					</div>
 
 					<div class="c-input">
@@ -101,13 +104,15 @@
 						<textarea
 							id="add_comment"
 							col="15"
-							row="10"></textarea>
+							row="10"
+							onchange="validComment()"></textarea>
 					</div>
 
 					<div class="c-buttom">
 						<button
 							id="comment_button"
 							type="button"
+							onclick="addComment()"
 							disabled>Comment</button>
 					</div>
 				</form>

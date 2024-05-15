@@ -53,6 +53,10 @@ h2 {
 	overflow: auto;
 }
 
+#ascend {
+	margin-left: 30px;
+}
+
 .display-device {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
