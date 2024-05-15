@@ -59,9 +59,9 @@ function sortComments() {
 
 	commentListData.sort((a, b) => {
 		if (sortType.value == newestSortType) {
-			return a.date - b.date;
-		} else {
 			return b.date - a.date;
+		} else {
+			return a.date - b.date;
 		}
 	});
 	
