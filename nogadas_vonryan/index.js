@@ -70,8 +70,8 @@ function sortComments() {
 
 function addComment() {
 	const newComment = {
-		name: comment_name.value,
-		comment: comment_content.value,
+		name: commentName.value,
+		comment: commentContent.value,
 		date: new Date().toISOString(),
 	};
 
