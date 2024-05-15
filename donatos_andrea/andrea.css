@@ -225,6 +225,13 @@ p {
 	}
 }
 
+#sort_type {
+	border: solid 1px #012d13;
+	border-radius: 3px;
+	background-color: #4f9c6cf2;
+	text-align: center;
+}
+
 @media (max-width: 500px) {
 	img {
 		width: 100%;
