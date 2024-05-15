@@ -93,31 +93,27 @@
 		</div>
 		<div class="comments-section">
 			<h2>Comments Section</h2>
-			<p>Your clarity of purpose in pursuing your goals
-			   is admirable - Von</p>
-			<p>I hope you achieve your goal - Andrea </p>
-			<p>Persistence pays off, keep going - Mau</p>
-			<p>You are making a difference - Mark</p>
+			<div id="comments-container">
+				<p>Your clarity of purpose in pursuing your goals is admirable - Von</p>
+				<p>I hope you achieve your goal - Andrea </p>
+				<p>Persistence pays off, keep going - Mau</p>
+				<p>You are making a difference - Mark</p>
+			</div>
+			<button id="sort-desc">Newest to Oldest</button>
+			<button id="sort-asc">Oldest to Newest</button>
 			<div class="add-comment">
 				<h3>Add a Comment</h3>
 				<form>
 					<div>
 						<label class="comment-label" for="name">Name</label>
-						<input class="form-name" type="text" name="name"
-							   id="name" />
+						<input class="form-name" type="text" name="name" id="name" />
 					</div>
 					<div>
-						<label class="comment-label" for="comment">
-							Comment
-						</label>
-						<textarea class="form-comment" name="comment"
-								  id="comment" cols="30" rows="10"></textarea>
+						<label class="comment-label" for="comment">Comment</label>
+						<textarea class="form-comment" name="comment" id="comment" cols="30" rows="10"></textarea>
 					</div>
 					<div>
-						<button class="comment-button" type="button"
-								id="comment_button" disabled>
-							Comment
-						</button>
+						<button class="comment-button" type="button" id="comment_button" disabled>Comment</button>
 					</div>
 				</form>
 			</div>
