@@ -108,6 +108,10 @@
 			</ul>
 			<div class="comment-section">
 				<h2>Comment Section</h2>
+				<select id="sort_type" onchange="sortComments()">
+					<option value="newest_first">Newest First</option>
+					<option value="oldest_first">Oldest First</option>
+				</select>
 				<ul class="comment-list"></ul>
 				<h3>Add a comment</h3>
 				<form class="comment-form">

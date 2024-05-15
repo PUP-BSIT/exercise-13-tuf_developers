@@ -53,6 +53,21 @@ function updateComments() {
 	}
 }
 
+function sortComments() {
+	const sortType = document.querySelector("#sort_type");
+	const newestSortType = "newest_first";
+
+	commentListData.sort((a, b) => {
+		if (sortType.value == newestSortType) {
+			return a.date - b.date;
+		} else {
+			return b.date - a.date;
+		}
+	});
+	
+	updateComments();
+}
+
 function addComment() {
 	const newComment = {
 		name: comment_name.value,
@@ -61,5 +76,7 @@ function addComment() {
 	};
 
 	commentListData.push(newComment);
-	updateComments();
+	sortComments();
 }
+
+sortComments();
