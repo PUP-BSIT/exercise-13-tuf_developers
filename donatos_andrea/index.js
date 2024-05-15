@@ -1,15 +1,3 @@
-/*function commentForm() {
-    let comment_button = document.getElementById("comment_button");
-    let name = document.getElementById("member_name");
-    let comment = document.getElementById("comment_area");
-
-    if (name.value.length > 0 && comment.value.length > 0) {
-        comment_button.disabled = false;
-    } else {
-        comment_button.disabled = true;
-    }
-} */
-
 const memberName = document.querySelector("#member_name");
 const commentArea = document.querySelector("#comment_area");
 const commentButton = document.querySelector("#comment_button");
@@ -40,7 +28,7 @@ const commentListData = [
 ];
 
 function commentForm() {
-	 if (memberName.value.length > 0 && commentArea.value.length > 0) {
+	 if (memberName.value && commentArea.value) {
          commentButton.disabled = false;
      } else {
          commentButton.disabled = true;
