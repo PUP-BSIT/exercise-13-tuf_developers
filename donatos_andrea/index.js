@@ -28,11 +28,11 @@ const commentListData = [
 ];
 
 function commentForm() {
-	 if (memberName.value && commentArea.value) {
-         commentButton.disabled = false;
-     } else {
-         commentButton.disabled = true;
-}
+    if (memberName.value && commentArea.value) {
+        commentButton.disabled = false;
+    } else {
+        commentButton.disabled = true;
+    }
 }
 
 function updateComments() {
@@ -44,8 +44,8 @@ function updateComments() {
 
 		newComment.innerHTML = `
 			<div class='upper-tags'>
-				<div class='user-tag'>${comment.name}</div>
-				<div class='date-tag'>${formatDate.toLocaleString()}</div>
+			    <div class='user-tag'>${comment.name}</div>
+			    <div class='date-tag'>${formatDate.toLocaleString()}</div>
 			</div>
 			<div class='user-comment'>${comment.comment}</div>`;
 
