@@ -5,6 +5,10 @@ const commentsContainer = document.querySelector("#comments");
 const sortAscButton = document.querySelector("#ascend");
 const sortDescButton = document.querySelector("#descend");
 
+const newest = "newest_to_oldest";
+const oldest = "oldest_to_newest";
+let sortOrder = newest;
+
 const comments = [
 	{
 		name: "Jhef",
@@ -80,3 +84,12 @@ function pressButton() {
 	commentMessage.value = "";
 	commentButton.disabled = true;
 }
+
+commentButton.addEventListener("click", pressButton);
+sortAscButton.addEventListener("click", sortCommentsAsc);
+sortDescButton.addEventListener("click", sortCommentsDesc);
+
+commentName.addEventListener("input", validateComment);
+commentMessage.addEventListener("input", validateComment);
+
+displayComments();
