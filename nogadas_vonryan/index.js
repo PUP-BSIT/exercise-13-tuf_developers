@@ -52,3 +52,14 @@ function updateComments() {
 		commentList.append(newComment);
 	}
 }
+
+function addComment() {
+	const newComment = {
+		name: comment_name.value,
+		comment: comment_content.value,
+		date: new Date().toISOString(),
+	};
+
+	commentListData.push(newComment);
+	updateComments();
+}
