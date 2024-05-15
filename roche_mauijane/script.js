@@ -73,3 +73,10 @@ function sortCommentsDesc() {
 	displayComments();
 	sortOrder = newest;
 }
+
+function pressButton() {
+	addComment(commentName.value, commentMessage.value);
+	commentName.value = "";
+	commentMessage.value = "";
+	commentButton.disabled = true;
+}
