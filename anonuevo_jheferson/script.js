@@ -5,8 +5,8 @@ const commentsContainer = document.querySelector("#comments-container");
 const sortAscButton = document.querySelector("#sort-asc");
 const sortDescButton = document.querySelector("#sort-desc");
 
-const newest = 'newest_to_oldest';
-const oldest = 'oldest_to_newest';
+const newest = "newest_to_oldest";
+const oldest = "oldest_to_newest";
 let sortOrder = newest;
 
 const comments = [
@@ -48,11 +48,11 @@ function addComment(name, message, date) {
 		date: date || new Date(),
 	};
 	comments.push(comment);
-    if(sortOrder == newest){
-        sortCommentsDesc();
-    } else{ 
-        sortCommentsAsc(); 
-    }
+	if (sortOrder == newest) {
+		sortCommentsDesc();
+	} else {
+		sortCommentsAsc();
+	}
 }
 
 function displayComments() {
@@ -68,16 +68,16 @@ function displayComments() {
 function sortCommentsAsc() {
 	comments.sort((a, b) => new Date(a.date) - new Date(b.date));
 	displayComments();
-    sortOrder = oldest;
+	sortOrder = oldest;
 }
 
 function sortCommentsDesc() {
 	comments.sort((a, b) => new Date(b.date) - new Date(a.date));
 	displayComments();
-    sortOrder = newest;
+	sortOrder = newest;
 }
 
-function pressButton(){
+function pressButton() {
 	addComment(commentName.value, commentMessage.value);
 	commentName.value = "";
 	commentMessage.value = "";
