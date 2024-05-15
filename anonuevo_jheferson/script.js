@@ -1,5 +1,8 @@
 const commentName = document.querySelector("#name");
 const commentMessage = document.querySelector("#comment");
+const commentButton = document.querySelector("#comment_button");
+const commentsContainer = document.querySelector("#comments-container");
+
 const comments = [
 	{
 		name: "Von",
@@ -23,11 +26,42 @@ const comments = [
 		date: new Date("2024-04-27"),
 	},
 ];
-    
+
 function validateComment() {
 	if (commentName.value.length && commentMessage.value.length) {
 		commentButton.disabled = false;
 	} else {
 		commentButton.disabled = true;
 	}
+}
+
+function addComment(name, message, date) {
+	const comment = {
+		name,
+		message,
+		date: date || new Date(),
+	};
+	comments.push(comment);
+    if(sortOrder == newest){
+        sortCommentsDesc();
+    } else{ 
+        sortCommentsAsc(); 
+    }
+}
+
+function displayComments() {
+	commentsContainer.innerHTML = "";
+	comments.forEach((comment) => {
+		const commentElement = document.createElement("p");
+		commentElement.textContent = `${comment.message} -
+            ${comment.name} (${comment.date.toLocaleString()})`;
+		commentsContainer.append(commentElement);
+	});
+}
+
+function pressButton(){
+	addComment(commentName.value, commentMessage.value);
+	commentName.value = "";
+	commentMessage.value = "";
+	commentButton.disabled = true;
 }
