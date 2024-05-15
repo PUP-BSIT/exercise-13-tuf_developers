@@ -108,34 +108,31 @@
 			</ul>
 			<div class="comment-section">
 				<h2>Comment Section</h2>
-				<ul>
-					<li>Your goals are very ambitious! -Jhef</li>
-					<li>I hope you achieve all your goals that will 
-						help you be successful in life - Andrea</li>
-					<li>Keep on going hard work pays off - Mau</li>
-					<li>Your perspective is refreshing - Mark</li>
-				</ul>
+				<select id="sort_type" onchange="sortComments()">
+					<option value="newest_first">Newest First</option>
+					<option value="oldest_first">Oldest First</option>
+				</select>
+				<ul class="comment-list"></ul>
 				<h3>Add a comment</h3>
 				<form class="comment-form">
 					<div>
 						<label for="name">Name</label>
-						<input
-							id="comment_name"
+						<input id="comment_name"
 							type="name"
 							oninput="validateComment()" />
 					</div>
 					<div>
 						<label for="comment">Comment</label>
-						<textarea
-							id="comment_content"
+						<textarea id="comment_content"
 							name="comment"
 							rows="10"
 							cols="50"
 							oninput="validateComment()"></textarea>
 					</div>
-					<button id="comment_button" type="button" disabled>
-						Comment
-					</button>
+					<button id="comment_button" 
+						type="button" 
+						onclick="addComment()"
+						disabled>Comment</button>
 				</form>
 			</div>
 		</section>
@@ -162,8 +159,7 @@
 				</div>
 				<div class="message-container">
 					<label for="message">Message</label>
-					<textarea name="message" cols="30" rows="10">
-					</textarea>
+					<textarea name="message" cols="30" rows="10"></textarea>
 				</div>
 				<div class="send-me-container">
 					<label for="sendme">Send me a copy</label>

@@ -171,11 +171,46 @@ button {
 	width: 100%;
 }
 
-.comment-section ul {
-	display: flex;
+.comment-section li {
 	flex-direction: column;
+	border: none;
+	background-color: #012636;
+	color: white;
+}
+
+.upper-tags {
+	display: flex;
 	gap: 1rem;
-	padding: 1rem;
+}
+
+.user-comment {
+	border: 1px solid white;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.user-tag,
+.date-tag {
+	text-align: start;
+	font-size: medium;
+	border: 1px solid #012636;
+	color: #012636;
+	background-color: white;
+	width: fit-content;
+	padding: 7px;
+	border-radius: 7px;
+}
+
+.date-tag {
+	font-size: small;
+	padding: 4px;
+	text-align: center;
+	align-self: center;
+}
+
+#sort_type {
+	padding: 0.5rem;
+	border-radius: 10px;
 }
 
 .comment-form button:disabled {
@@ -206,9 +241,13 @@ button {
 }
 
 @media (max-width: 425px) {
-	.contact-upper {
+	.contact-upper,
+	.interests ul,
+	.my-works ol,
+	.my-goals ul {
 		display: flex;
 		flex-direction: column;
+		text-align: center;
 	}
 }
 
