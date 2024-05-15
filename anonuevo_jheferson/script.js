@@ -2,7 +2,11 @@ const commentName = document.querySelector("#name");
 const commentMessage = document.querySelector("#comment");
 const commentButton = document.querySelector("#comment_button");
 const commentsContainer = document.querySelector("#comments-container");
-
+const sortAscButton = document.querySelector("#sort-asc");
+const sortDescButton = document.querySelector("#sort-desc");
+const newest = 'newest_to_oldest';
+const oldest = 'oldest_to_newest';
+let sortOrder = 'newest_to_oldest';
 const comments = [
 	{
 		name: "Von",
@@ -57,6 +61,18 @@ function displayComments() {
             ${comment.name} (${comment.date.toLocaleString()})`;
 		commentsContainer.append(commentElement);
 	});
+}
+
+function sortCommentsAsc() {
+	comments.sort((a, b) => new Date(a.date) - new Date(b.date));
+	displayComments();
+    sortOrder = oldest;
+}
+
+function sortCommentsDesc() {
+	comments.sort((a, b) => new Date(b.date) - new Date(a.date));
+	displayComments();
+    sortOrder = newest;
 }
 
 function pressButton(){
